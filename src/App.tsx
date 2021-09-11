@@ -1,8 +1,8 @@
 import React from "react";
-import "./App.css";
 import Card from "./components/UI/Card";
 import Image from "./components/Layout/Image";
 import Joke from "./components/Layout/Joke";
+import JokeForm from "./components/Layout/JokeForm";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Joke
         joke={`“If Chuck Norris were to travel to an alternate dimension in which there was another Chuck Norris and they both fight, they would both win”`}
       />
-      <h1>Chuck Norris app</h1>
+      <JokeForm name="Chuck Norris" />
     </Card>
   );
 }
