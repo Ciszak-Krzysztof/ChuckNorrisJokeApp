@@ -3,6 +3,7 @@ import classes from "./SaveJokes.module.css";
 
 const SaveJokes: React.FC = () => {
   const [jokesAmount, setJokesAmount] = useState<number>(0);
+  const [jokeArray, setJokeArray] = useState([]);
 
   const decrementInput = () => {
     setJokesAmount((prevAmount) => {
@@ -19,6 +20,28 @@ const SaveJokes: React.FC = () => {
   const inputHandler = (event: any) => {
     setJokesAmount(event.target.value);
   };
+
+  const fetchUrl: string = `http://api.icndb.com/jokes/random/${jokesAmount}`;
+
+  const onSaveHandler = (event: React.FormEvent) => {
+    event.preventDefault();
+
+    const fetchJoke = async () => {
+      const response = await fetch(fetchUrl);
+      if (!response.ok) {
+        throw new Error("Something went wrong!");
+      }
+      const responseData = await response.json();
+
+      setJokeArray(responseData.value);
+      // console.log(responseData);
+      // console.log(responseData.value);
+    };
+    fetchJoke().catch((error) => {
+      console.log(error.message);
+    });
+  };
+  console.log(jokeArray);
 
   return (
     <div>
@@ -56,6 +79,7 @@ const SaveJokes: React.FC = () => {
           className={`${classes.button} ${
             jokesAmount > 0 && jokesAmount <= 100 ? classes.active : ""
           } `}
+          onClick={onSaveHandler}
         >
           Save Jokes
         </button>
