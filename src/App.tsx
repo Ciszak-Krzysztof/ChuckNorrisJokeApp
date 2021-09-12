@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [chuckJoke, setChuckJoke] = useState<string>("");
+  const [isChuck, setIsChuck] = useState(false);
 
   useEffect(() => {
     const fetchJoke = async () => {
@@ -26,11 +27,12 @@ function App() {
       console.log(error.message);
     });
   }, []);
+
   return (
     <Card>
-      <Image />
+      <Image jokeName={isChuck} />
       <Joke joke={chuckJoke} />
-      <JokeForm />
+      <JokeForm onDrawJoke={setChuckJoke} onDrawImage={setIsChuck} />
       <SaveJokes />
     </Card>
   );

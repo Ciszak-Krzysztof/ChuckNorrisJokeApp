@@ -1,4 +1,10 @@
-.image {
+.imageChuck {
   width: 100%;
   height: auto;
+}
+
+.imageUnknown {
+  width: 78%;
+  height: auto;
+  margin-left: 11%;
 }
