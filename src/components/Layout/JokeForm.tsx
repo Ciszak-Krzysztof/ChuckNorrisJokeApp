@@ -1,7 +1,7 @@
 import { useState } from "react";
 import classes from "./JokeForm.module.css";
 
-const JokeForm: React.FC = (props) => {
+const JokeForm: React.FC<{ onDrawJoke: any }> = (props) => {
   const [category, setCategory] = useState<string>("");
   const [firstName, setFirstName] = useState<string>("Chuck");
   const [lastName, setLastName] = useState<string>("Norris");
@@ -25,14 +25,14 @@ const JokeForm: React.FC = (props) => {
     }
   };
 
-  const fetchUrl = `http://api.icndb.com/jokes/random?firstName=${firstName}&lastName=${lastName}`;
-  const fetchUrlCategory = `${fetchUrl}&limitTo=[${category}]`;
+  const fetchUrl: string = `http://api.icndb.com/jokes/random?firstName=${firstName}&lastName=${lastName}`;
+  const fetchUrlCategory: string = `${fetchUrl}&limitTo=[${category}]`;
 
   const onSubmitHandler = (event: React.FormEvent) => {
     event.preventDefault();
 
     const fetchJoke = async () => {
-      const response = await fetch(
+      const response: Response = await fetch(
         category.length === 0 ? fetchUrl : fetchUrlCategory
       );
 
@@ -42,8 +42,7 @@ const JokeForm: React.FC = (props) => {
 
       const responseData = await response.json();
 
-      console.log(responseData.value.joke);
-      console.log(responseData);
+      props.onDrawJoke(responseData.value.joke);
     };
 
     fetchJoke().catch((error) => {
