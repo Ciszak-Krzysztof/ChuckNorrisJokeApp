@@ -39,7 +39,7 @@ const JokeForm: React.FC<{
     }
   };
 
-  const fetchUrl: string = `http://api.icndb.com/jokes/random?firstName=${firstName}&lastName=${lastName}`;
+  const fetchUrl: string = `https://api.icndb.com/jokes/random?firstName=${firstName}&lastName=${lastName}`;
   const fetchUrlCategory: string = `${fetchUrl}&limitTo=[${category}]`;
 
   const onSubmitHandler = (event: React.FormEvent) => {

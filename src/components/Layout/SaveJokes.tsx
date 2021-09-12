@@ -21,7 +21,7 @@ const SaveJokes: React.FC = () => {
     setJokesAmount(event.target.value);
   };
 
-  const fetchUrl: string = `http://api.icndb.com/jokes/random/${jokesAmount}`;
+  const fetchUrl: string = `https://api.icndb.com/jokes/random/${jokesAmount}`;
 
   const onSaveHandler = (event: React.FormEvent) => {
     event.preventDefault();

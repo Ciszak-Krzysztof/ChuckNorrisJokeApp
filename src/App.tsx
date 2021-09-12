@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     const fetchJoke = async () => {
-      const response = await fetch("http://api.icndb.com/jokes/random");
+      const response = await fetch("https://api.icndb.com/jokes/random");
 
       if (!response.ok) {
         throw new Error("Something went wrong!");
