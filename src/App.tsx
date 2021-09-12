@@ -24,6 +24,9 @@ function App() {
 
     fetchJoke().catch((error) => {
       console.log(error.message);
+      setChuckJoke(
+        "Something went wrong and we were not able to fetch joke for you"
+      );
     });
   }, []);
 
