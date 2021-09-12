@@ -1,6 +1,6 @@
 import classes from "./SaveJokes.module.css";
 
-const SaveJokes = () => {
+const SaveJokes: React.FC = () => {
   return (
     <div className={classes.flex}>
       <span className={classes.span}>

@@ -1,7 +1,10 @@
 import { useState } from "react";
 import classes from "./JokeForm.module.css";
 
-const JokeForm: React.FC<{ onDrawJoke: any; onDrawImage: any }> = (props) => {
+const JokeForm: React.FC<{
+  onDrawJoke: React.Dispatch<React.SetStateAction<string>>;
+  onDrawImage: React.Dispatch<React.SetStateAction<boolean>>;
+}> = (props) => {
   const [category, setCategory] = useState<string>("");
   const [firstName, setFirstName] = useState<string>("Chuck");
   const [lastName, setLastName] = useState<string>("Norris");

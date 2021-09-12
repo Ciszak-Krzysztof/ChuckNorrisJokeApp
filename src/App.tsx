@@ -1,4 +1,3 @@
-import React from "react";
 import Card from "./components/UI/Card";
 import Image from "./components/Layout/Image";
 import Joke from "./components/Layout/Joke";
@@ -8,7 +7,7 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [chuckJoke, setChuckJoke] = useState<string>("");
-  const [isChuck, setIsChuck] = useState(false);
+  const [isChuck, setIsChuck] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchJoke = async () => {
