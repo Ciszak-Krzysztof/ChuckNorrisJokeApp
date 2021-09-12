@@ -1,7 +1,7 @@
 import { useState } from "react";
 import classes from "./JokeForm.module.css";
 
-const JokeForm: React.FC<{ onDrawJoke: any }> = (props) => {
+const JokeForm: React.FC<{ onDrawJoke: any; onDrawImage: any }> = (props) => {
   const [category, setCategory] = useState<string>("");
   const [firstName, setFirstName] = useState<string>("Chuck");
   const [lastName, setLastName] = useState<string>("Norris");
@@ -10,6 +10,14 @@ const JokeForm: React.FC<{ onDrawJoke: any }> = (props) => {
     event: React.ChangeEvent<HTMLSelectElement>
   ) => {
     setCategory(event.target.value);
+  };
+
+  const isChuckHandler = () => {
+    if (`${firstName} ${lastName}` !== "Chuck Norris") {
+      props.onDrawImage(false);
+    } else {
+      props.onDrawImage(true);
+    }
   };
 
   const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -48,6 +56,8 @@ const JokeForm: React.FC<{ onDrawJoke: any }> = (props) => {
     fetchJoke().catch((error) => {
       console.log(error.message);
     });
+
+    isChuckHandler();
   };
 
   return (

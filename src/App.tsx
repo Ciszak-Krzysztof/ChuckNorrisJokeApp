@@ -32,7 +32,7 @@ function App() {
     <Card>
       <Image jokeName={isChuck} />
       <Joke joke={chuckJoke} />
-      <JokeForm onDrawJoke={setChuckJoke} />
+      <JokeForm onDrawJoke={setChuckJoke} onDrawImage={setIsChuck} />
       <SaveJokes />
     </Card>
   );
