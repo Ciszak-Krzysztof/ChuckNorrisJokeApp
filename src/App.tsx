@@ -7,7 +7,7 @@ import SaveJokes from "./components/Layout/SaveJokes";
 import { useState, useEffect } from "react";
 
 function App() {
-  const [chuckJoke, setChuckJoke] = useState("");
+  const [chuckJoke, setChuckJoke] = useState<string>("");
 
   useEffect(() => {
     const fetchJoke = async () => {
@@ -30,7 +30,7 @@ function App() {
     <Card>
       <Image />
       <Joke joke={chuckJoke} />
-      <JokeForm name="Chuck Norris" />
+      <JokeForm />
       <SaveJokes />
     </Card>
   );
