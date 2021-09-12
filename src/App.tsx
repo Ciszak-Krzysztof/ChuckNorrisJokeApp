@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [chuckJoke, setChuckJoke] = useState<string>("");
-  const [isChuck, setIsChuck] = useState<boolean>(false);
+  const [isChuck, setIsChuck] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchJoke = async () => {

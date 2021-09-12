@@ -22,3 +22,8 @@
   padding-left: 0;
   margin-bottom: 3rem;
 }
+
+.gray {
+  border-color: #c4c4c4;
+  color: #c4c4c4;
+}

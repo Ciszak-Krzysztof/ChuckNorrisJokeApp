@@ -8,6 +8,7 @@ const JokeForm: React.FC<{
   const [category, setCategory] = useState<string>("");
   const [firstName, setFirstName] = useState<string>("Chuck");
   const [lastName, setLastName] = useState<string>("Norris");
+  const [isTouched, setIsTouched] = useState<boolean>(false);
 
   const selectCategoryHandler = (
     event: React.ChangeEvent<HTMLSelectElement>
@@ -30,9 +31,11 @@ const JokeForm: React.FC<{
     } else {
       setLastName("");
     }
+    setIsTouched(true);
     if (event.target.value.length === 0) {
       setFirstName("Chuck");
       setLastName("Norris");
+      setIsTouched(false);
     }
   };
 
@@ -69,7 +72,9 @@ const JokeForm: React.FC<{
         <select
           onChange={selectCategoryHandler}
           defaultValue="select"
-          className={`${classes.form} ${classes.select}`}
+          className={`${classes.form} ${classes.select} ${
+            category === "" ? classes.gray : ""
+          }`}
         >
           <option value="select" disabled>
             Select category
@@ -80,7 +85,9 @@ const JokeForm: React.FC<{
         <input
           onChange={inputHandler}
           placeholder="Impersonate Chuck Norris"
-          className={`${classes.form} ${classes.input}`}
+          className={`${classes.form} ${classes.input} ${
+            !isTouched ? classes.gray : ""
+          }`}
         ></input>
       </div>
       <button className={`${classes.form} ${classes.button}`}>
