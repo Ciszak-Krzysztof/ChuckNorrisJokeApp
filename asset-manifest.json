@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ChuckNorrisJokeApp/static/css/main.53185ad5.chunk.css",
-    "main.js": "/ChuckNorrisJokeApp/static/js/main.76fd0c1e.chunk.js",
-    "main.js.map": "/ChuckNorrisJokeApp/static/js/main.76fd0c1e.chunk.js.map",
+    "main.js": "/ChuckNorrisJokeApp/static/js/main.4773c54c.chunk.js",
+    "main.js.map": "/ChuckNorrisJokeApp/static/js/main.4773c54c.chunk.js.map",
     "runtime-main.js": "/ChuckNorrisJokeApp/static/js/runtime-main.538c47fd.js",
     "runtime-main.js.map": "/ChuckNorrisJokeApp/static/js/runtime-main.538c47fd.js.map",
     "static/js/2.4a2dd11d.chunk.js": "/ChuckNorrisJokeApp/static/js/2.4a2dd11d.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.538c47fd.js",
     "static/js/2.4a2dd11d.chunk.js",
     "static/css/main.53185ad5.chunk.css",
-    "static/js/main.76fd0c1e.chunk.js"
+    "static/js/main.4773c54c.chunk.js"
   ]
 }
