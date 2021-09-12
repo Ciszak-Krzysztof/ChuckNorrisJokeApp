@@ -1,0 +1,56 @@
+.flex {
+  display: flex;
+  height: 3.5rem;
+}
+
+.span {
+  background-color: #f5f6f8;
+  border-radius: 6px;
+  width: 30%;
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 1rem;
+  align-items: center;
+}
+
+.button {
+  border-radius: 6px;
+  flex: 2;
+  background-color: #34394f;
+  color: white;
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.52px;
+  margin-left: 0.5rem;
+}
+
+.roundButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #34394f;
+  font-size: 1.65rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 2px solid;
+}
+
+.input {
+  border: none;
+  width: 2rem;
+  background-color: #f5f6f8;
+  outline: none;
+  padding-left: 1rem;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: -0.52px;
+}

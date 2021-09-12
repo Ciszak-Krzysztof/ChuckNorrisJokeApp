@@ -1,0 +1,24 @@
+.form {
+  width: 100%;
+  border-radius: 6px;
+  height: 3.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.52px;
+  margin-bottom: 1rem;
+  border: solid 2px #34394f;
+  background-color: white;
+  color: #34394f;
+  padding-left: 1rem;
+  box-sizing: border-box;
+}
+
+.button {
+  background-color: #34394f;
+  color: white;
+  margin-top: 1rem;
+  padding-left: 0;
+  margin-bottom: 3rem;
+}
