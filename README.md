@@ -4,6 +4,8 @@ React App that allows drawing random Chuck Norris jokes. It also allows selectio
 
 # Link for the app
 
+https://Ciszak-Krzysztof.github.io/ChuckNorrisJokeApp
+
 # Prerequisites for the task
 
 1. Write the application in Typescript (Angular 2+ or React + TS)
