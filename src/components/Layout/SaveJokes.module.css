@@ -16,9 +16,11 @@
 
 .button {
   border-radius: 6px;
+  border: none;
+  outline: none;
   flex: 2;
-  background-color: #34394f;
-  color: white;
+  background-color: transparent;
+  color: #34394f;
   font-family: Inter;
   font-size: 1rem;
   font-weight: 500;
@@ -26,6 +28,11 @@
   font-style: normal;
   letter-spacing: -0.52px;
   margin-left: 0.5rem;
+}
+
+.active {
+  background-color: #34394f;
+  color: white;
 }
 
 .roundButton {
@@ -40,12 +47,17 @@
   border: 2px solid;
 }
 
+.activeButton {
+  background-color: transparent;
+  font-weight: 900;
+}
+
 .input {
   border: none;
   width: 2rem;
-  background-color: #f5f6f8;
+  background-color: transparent;
   outline: none;
-  padding-left: 1rem;
+  text-align: center;
   font-family: Inter;
   font-size: 16px;
   font-weight: normal;
@@ -53,4 +65,32 @@
   font-style: normal;
   line-height: 1.63;
   letter-spacing: -0.52px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.error {
+  color: #f39a9a;
+  opacity: 0.6;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: -0.52px;
+  text-align: left;
+}
+
+.errorBox {
+  background-color: #f39a9a;
 }
