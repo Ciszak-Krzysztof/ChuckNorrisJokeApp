@@ -19,7 +19,9 @@ function App() {
 
       const responseData = await response.json();
 
-      setChuckJoke(responseData.value.joke);
+      const joke = responseData.value.joke.replace(/&quot;/g, '"');
+
+      setChuckJoke(joke);
     };
 
     fetchJoke().catch((error) => {

@@ -55,8 +55,9 @@ const JokeForm: React.FC<{
       }
 
       const responseData = await response.json();
+      const joke = responseData.value.joke.replace(/&quot;/g, '"');
 
-      props.onDrawJoke(responseData.value.joke);
+      props.onDrawJoke(joke);
     };
 
     fetchJoke().catch((error) => {
